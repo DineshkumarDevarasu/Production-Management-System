@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:scrollbars="vertical"
+    android:background="#DCF1F9F9"  >
+
+    <!--header-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content" android:layout_height="fill_parent">
+
+
+            <!--Dynamic Chefname-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/hometab">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/tvchefname"
+                    android:visibility="invisible"/>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:id="@+id/tvchefid"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000" />
+
+        <RelativeLayout
+            android:id="@+id/rldisplaychefname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvdisplaydate"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="10dp"
+                android:text="displaydate"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/tvdpname"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:typeface="serif" />
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/logout_logo"
+                android:id="@+id/btnlogout" />
+        </RelativeLayout>
+
+        <!--Dynamic ChefName click  display chefname-->
+     <!--   <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rldisplaychefname"
+            android:layout_marginTop="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvdisplaydate"
+                android:layout_alignParentLeft="true"
+                android:textColor="#000"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:id="@+id/tvdpname"
+                android:textColor="#000"/>
+            &lt;!&ndash; <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="50dp"
+                 android:text="Log Out"
+                 android:id="@+id/btnlogout"
+                 android:background="@drawable/chefname_rounded"
+                 android:drawableRight="@drawable/logouticon"
+                 android:textAllCaps="false"
+                 android:layout_toRightOf="@id/tvdpname"
+                 android:layout_marginLeft="40dp"
+                 android:layout_marginRight="10dip" />&ndash;&gt;
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btnlogout"
+                android:background="@drawable/logoutbutton"
+                android:layout_toRightOf="@id/tvdpname"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>-->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000"
+            android:id="@+id/hline1"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/orderChefproductionView">
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="#000000"
+            android:id="@+id/hline2"/>
+
+
+        <!--custom calendar-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/customcalendarlayout"
+            android:baselineAligned="false">
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/leftside"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Show Calendar"
+                        android:background="@drawable/showcalendar_rounded"
+                        android:drawableLeft="@drawable/calendaricon"
+                        android:id="@+id/btnshowcalendar"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="3dp" />
+                    <LinearLayout
+                        android:id="@+id/buttonlayout"
+                        android:layout_width="320dp"
+                        android:layout_height="60sp"
+                        android:background="@drawable/topbar"
+                        android:gravity="left|top"
+                        android:height="60sp"
+                        android:orientation="horizontal" >
+
+                        <Button
+                            android:id="@+id/settings"
+                            android:layout_width="54sp"
+                            android:layout_height="60sp"
+                            android:background="@drawable/meenu" />
+
+                        <TextView
+                            android:id="@+id/currentMonth"
+                            android:layout_width="fill_parent"
+                            android:layout_height="60sp"
+                            android:layout_weight="0.6"
+                            android:gravity="center"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#FFFFFF"></TextView>
+
+                        <ImageView
+                            android:id="@+id/prevMonth"
+                            android:layout_width="20sp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10sp"
+                            android:src="@drawable/calendar_left_arrow_selector" >
+                        </ImageView>
+
+                        <ImageView
+                            android:id="@+id/nextMonth"
+                            android:layout_width="20sp"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="10sp"
+                            android:src="@drawable/calendar_right_arrow_selector" >
+                        </ImageView>
+
+                        <Button
+                            android:id="@+id/addEvent"
+                            android:layout_width="54sp"
+                            android:layout_height="60sp"
+                            android:background="@drawable/plus" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/selectedDayMonthYear"
+                        android:layout_width="320dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/calendar_top_header"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:textColor="#FFFFFF" >
+                    </Button>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/showdayslayout">
+
+                        <ImageView
+                            android:id="@+id/calendarheader"
+                            android:layout_width="320dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/calendar_days" >
+                        </ImageView>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rlorderdata"
+                        android:gravity="center_vertical">
+
+                        <GridView
+                            android:id="@+id/calendar"
+                            android:layout_width="320dp"
+                            android:layout_height="320dp"
+                            android:numColumns="7"
+                            android:layout_alignParentLeft="true">
+                        </GridView>
+                    </RelativeLayout>
+
+
+
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <!--Event show-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/orderDataListLayout">
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>
